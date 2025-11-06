@@ -15,6 +15,7 @@ This project uses MySQL.
 For security reasons, the database password is not included in the uploaded code. Before continuing with the next steps, the user must run the command below to start a MySQL server and create the database:
 
 Run the command inside your terminal:
+    
     docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=testdb -p 3306:3306 -d mysql:latest
 
 
