@@ -12,10 +12,10 @@ db = SQLAlchemy(app)
 with app.app_context():
     db.metadata.reflect(db.engine)
 
-Event = db.metadata.tables['event']
-Game = db.metadata.tables['game']
-Team = db.metadata.tables['team']
-Sport = db.metadata.tables['sport']
+Event = db.metadata.tables['Event']
+Game = db.metadata.tables['Game']
+Team = db.metadata.tables['Team']
+Sport = db.metadata.tables['Sport']
 
 # Home Page 
 @app.route("/")
@@ -23,8 +23,8 @@ def home():
     with db.engine.connect() as connection:
         query = """
         SELECT g.game_id, e.event_date, e.event_time, e.event_location
-        FROM game g
-        JOIN event e ON g._event_id = e.event_id
+        FROM Game g
+        JOIN Event e ON g._event_id = e.event_id
         ORDER BY e.event_date
         """
         games = connection.execute(db.text(query)).fetchall()
@@ -90,7 +90,6 @@ def game_add():
  
 @app.route("/details/<int:game_id>")
 def game_detail(game_id):
-    from sqlalchemy import text
     with db.engine.connect() as conn:
         query = """
             SELECT e.event_date, e.event_time, e.event_location,
@@ -109,4 +108,4 @@ def game_detail(game_id):
 
    
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
