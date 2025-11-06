@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Game Form{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+<h4>Add New Game</h4>
+<form action="{{ url_for('game_add') }}" method="POST">
+    <p>Event Date:</p>
+    <p><input type="date" name="date" required></p>
+
+    <p>Event Time:</p>
+    <p><input type="time" name="time" required></p>
+
+    <p>Event Location:</p>
+    <p><input type="text" name="location" required></p>
+
+    <p>Sport:</p>
+    <p><input type="text" name="sport" required></p>
+
+    <p>Team 1:</p>
+    <p><input type="text" name="team1" required></p>
+
+    <p>Team 2:</p>
+    <p><input type="text" name="team2" required></p>
+    
+    <p><input type="submit" value="Submit" /></p>  
+    
+</form>
+{% endblock %}
