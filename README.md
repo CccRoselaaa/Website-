@@ -3,6 +3,7 @@
 A simple website built using Flask (Python) with a MySQL database.
 
 1. Requirements
+
 Before running the project, install these Python packages:
 
         pip install flask
