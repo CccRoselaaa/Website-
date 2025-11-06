@@ -1,24 +1,34 @@
-# Website
-Website Creation using Flask, in Python
+# Flask Website Project
 
-Requirements:
-Need to install:
-    pip install mysql
-    pip install mysql-connector-python
+A simple website built using Flask (Python) with a MySQL database.
 
-    pip install flask
-    pip install flask-sqlalchemy
+1. Requirements
+Before running the project, install these Python packages:
 
+pip install flask
+pip install flask-sqlalchemy
+pip install mysql-connector-python
 
-Setting up the Database:
-    For privacy reasons, i cannot share my exact database information here, as I would need to show in my code my password as well, so in order to create a database the user can use, before running the file called Database Creation, in the terminal type out: 
-    
+2. Setting Up the Database
+
+This project uses MySQL.
+For security reasons, the database password is not included in the uploaded code. Before continuing with the next steps, the user must run the command below to start a MySQL server and create the database:
+
+Run the command inside your terminal:
     docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=testdb -p 3306:3306 -d mysql:latest
 
-    
-This will create a MySQL server that can be used immediatly.
 
+3. Creating Tables
 
-After creating the database (running the create database file, assuming there was no error), you should now be able to access the website created.
+After Docker starts successfully, run the file: " Database Creation.py " This file generates all required tables used in the website. If there are no errors, your database is ready to use.
 
-I'll be sharing as an export from MySQL, called testdb, which was the database that i created during development for this website.
+4. Running the Website
+
+Once the database is set up, run inside the terminal: 
+    python main.py
+Inside the terminal should be a link that you can follow (' http://127.0.0.1:5000/ ')
+The website should be running.
+
+Bonus: Database Export Included
+A MySQL export named testdb.sql is included in the repository.
+You can import it manually into MySQL Workbench or another database tool if needed.
