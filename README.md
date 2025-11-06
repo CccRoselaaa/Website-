@@ -5,9 +5,11 @@ A simple website built using Flask (Python) with a MySQL database.
 1. Requirements
 Before running the project, install these Python packages:
 
-pip install flask
-pip install flask-sqlalchemy
-pip install mysql-connector-python
+        pip install flask
+    
+        pip install flask-sqlalchemy
+    
+        pip install mysql-connector-python
 
 2. Setting Up the Database
 
@@ -31,5 +33,6 @@ Inside the terminal should be a link that you can follow (' http://127.0.0.1:500
 The website should be running.
 
 Bonus: Database Export Included
+
 A MySQL export named testdb.sql is included in the repository.
 You can import it manually into MySQL Workbench or another database tool if needed.
