@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, redirect
-from sqlalchemy import text
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import text
 
 app = Flask(__name__)
 
 # Connect to database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:Prezenca44$@localhost/testdb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@localhost:3306/testdb'
 db = SQLAlchemy(app)
 
 # Reflect existing tables from db
