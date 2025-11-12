@@ -1,0 +1,35 @@
+During this project, I used AI mainly as a support tool while I was building the website.
+I only used AI when I needed help figuring out specific parts or checking if my approach made sense.
+
+  At the planning stage, I used AI to understand how to connect Flask with a pre-existing MySQL database (which I planned to create later) and use reflection instead of re-creating the models again.
+
+  AI also helped me improve the logic for the game_add function.
+It explained how to insert new entries, link them correctly, and suggested using LAST_INSERT_ID() to get the newly created IDs. 
+I liked this idea because it was simple and efficient for connecting related records between tables.
+
+	AI helped me identify possible causes whenever I had issues in my code, for example, when I forgot to add a parameter placeholder (:id) in a query, which caused an error, or when MySQL didn’t recognize a table name because I had used lowercase instead of uppercase letters.
+
+	AI also recommended that other users use Docker for easier setup, since it allowed me to run the database without sharing any sensitive information online.
+
+After AI gave me a suggestion, I made sure to understand how it worked and test it in my code. If I didn’t, I checked documentation (Flask/ MySQL) for further explanation.
+
+
+\1. Parts written by me:
+	The database creation file and all CREATE TABLE statements
+	Flask routes and functions (also the SQL queries inside the routes)
+	All HTML templates and the page structure
+
+AI did not write the actual logic or structure for me.
+I used it more like a guide to confirm that my logic and syntax were correct for what I wanted to create.
+
+
+\2. Why I made certain decisions:
+	I chose Flask because it’s easy to use for a small project.
+	I used my previous knowledge of MySQL to create the database, since it’s what I’m most comfortable using.
+	I used SQLAlchemy reflection instead of ORM models because my tables were already created, and reflection allowed me to connect to them easily. (AI did suggest creating ORM models, but since it’s a small project, reflection worked fine for me.)
+	I used Docker because it made setup easier for anyone testing the project.
+
+
+\3. One improvement I would make with more time:
+If I had more time, I would like to add a deletion option on the navigation bar and a filtering option on the home page to view games by sport or maybe date.
+
